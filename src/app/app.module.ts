@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { CraftAndGiftsComponent } from './pages/craft-and-gifts/craft-and-gifts.component';
 import { HandmadeStuffComponent } from './pages/handmade-stuff/handmade-stuff.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
+import { ContactDataService } from './service/contact-data.service';
 
 @NgModule({
   declarations: [
@@ -22,9 +24,12 @@ import { ContactUsComponent } from './pages/contact-us/contact-us.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ContactDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

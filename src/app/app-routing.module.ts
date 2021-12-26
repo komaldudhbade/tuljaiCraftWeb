@@ -6,6 +6,7 @@ import { HandmadeStuffComponent} from './pages/handmade-stuff/handmade-stuff.com
 import { ContactUsComponent} from './pages/contact-us/contact-us.component';
 
 const routes: Routes = [
+  {path:'',redirectTo:'home', pathMatch: 'full' },
   {path: 'home' , component: HomeComponent},
   {path: 'craftAndGifts' , component: CraftAndGiftsComponent},
   {path: 'handmadeStuff' , component: HandmadeStuffComponent},
