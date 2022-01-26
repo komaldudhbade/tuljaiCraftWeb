@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Observable } from 'rxjs';
 import { ContactDataService } from 'src/app/service/contact-data.service';
 import { IContactDataVO } from 'src/app/vo/i-contact-data';
@@ -10,7 +11,15 @@ import { IContactDataVO } from 'src/app/vo/i-contact-data';
 })
 export class ContactUsComponent implements OnInit {
   public contactData: IContactDataVO;
-  constructor(private contactService: ContactDataService) {
+  public isMessageSend: boolean = false;
+  public contactForm: FormGroup;
+  constructor(private contactService: ContactDataService, private formBuilder: FormBuilder) {
+    this.contactForm = this.formBuilder.group({
+      firstName: ['', Validators.required],
+      lastName:  ['', Validators.required],
+      email: ['', [Validators.required, Validators.email]],
+      message: ['', Validators.required]
+    });
     this.contactData = {
       shopName:'',
       address : '',
@@ -24,5 +33,15 @@ export class ContactUsComponent implements OnInit {
       this.contactData = data;
     });
   }
+
+ public get f(): { [key: string]: AbstractControl } {
+    return this.contactForm.controls;
+  }
+ public sendMessage():void {
+  if (this.contactForm.invalid) {
+    return;
+  }
+  this.isMessageSend = true;
+ } 
 
 }

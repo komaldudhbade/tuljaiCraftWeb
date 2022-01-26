@@ -11,6 +11,7 @@ import { CraftAndGiftsComponent } from './pages/craft-and-gifts/craft-and-gifts.
 import { HandmadeStuffComponent } from './pages/handmade-stuff/handmade-stuff.component';
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { ContactDataService } from './service/contact-data.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { ContactDataService } from './service/contact-data.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     ContactDataService
