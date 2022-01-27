@@ -12,6 +12,7 @@ import { IContactDataVO } from 'src/app/vo/i-contact-data';
 export class ContactUsComponent implements OnInit {
   public contactData: IContactDataVO;
   public isMessageSend: boolean = false;
+  public formSubmitted: boolean = false;
   public contactForm: FormGroup;
   constructor(private contactService: ContactDataService, private formBuilder: FormBuilder) {
     this.contactForm = this.formBuilder.group({
@@ -39,6 +40,7 @@ export class ContactUsComponent implements OnInit {
   }
  public sendMessage():void {
   if (this.contactForm.invalid) {
+    this.formSubmitted = true;
     return;
   }
   this.isMessageSend = true;
