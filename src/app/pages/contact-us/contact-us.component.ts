@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Observable } from 'rxjs';
 import { ContactDataService } from 'src/app/service/contact-data.service';
 import { IContactDataVO } from 'src/app/vo/i-contact-data';
 
@@ -29,7 +28,7 @@ export class ContactUsComponent implements OnInit {
       email: ''
     };
   }
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.contactService.getContactData().subscribe(data => {
       this.contactData = data;
     });
@@ -40,10 +39,13 @@ export class ContactUsComponent implements OnInit {
   }
  public sendMessage():void {
   if (this.contactForm.invalid) {
+    this.isMessageSend = false;
     this.formSubmitted = true;
     return;
   }
   this.isMessageSend = true;
+  this.formSubmitted = false;
+  this.contactForm.reset();
  } 
 
 }
