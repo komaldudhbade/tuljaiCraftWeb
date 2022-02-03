@@ -1,0 +1,29 @@
+{
+    "categories": [
+        {
+           "categoryKey" :  "craftsAndGifts",
+           "categoryName" : "Craft & Gifts",
+           "productList" : [
+                {
+                    "productName" : "Woolen Purse",
+                    "imageName" : "",
+                    "price": 300,
+                    "productDesc": "Small woolen purse for regular use"
+                },
+                {
+                    "productName" : "Woolen Frock",
+                    "imageName" : "",
+                    "price": 600,
+                    "productDesc": "Small woolen frock for baby girl"
+                }                
+           ]
+        },
+        {
+            "categoryKey" :  "homemadeStuff",
+            "categoryName" : "Homemade Stuff",
+            "productList" : [
+                
+            ]
+         }        
+    ]
+}
