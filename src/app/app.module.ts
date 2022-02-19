@@ -12,6 +12,7 @@ import { HandmadeStuffComponent } from './pages/handmade-stuff/handmade-stuff.co
 import { ContactUsComponent } from './pages/contact-us/contact-us.component';
 import { ContactDataService } from './service/contact-data.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ProductService } from './service/product.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule
   ],
   providers: [
-    ContactDataService
+    ContactDataService,
+    ProductService
   ],
   bootstrap: [AppComponent]
 })

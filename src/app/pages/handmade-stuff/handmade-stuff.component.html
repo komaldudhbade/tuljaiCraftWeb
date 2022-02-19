@@ -1,13 +1,21 @@
-<p>comming Soon!</p>
-<div class="row g-2">
-    <div class="col-lg-3 col-md-3 col-xs-6" *ngFor="let i of list">
-        <div class="card">
-            <img [src]="imagePath" class="card-img-top" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">Woolen Frock</h5>
-              <p class="card-text">Small woolen frock for baby girl.</p>
-              <span  class="btn mix-btn_page-btn bg-purpule-800">₹ 400</span>
-            </div>
+<h3>Handmade Stuff</h3>
+
+<div>
+  <div class="row g-2" *ngIf="!productListByCatgory">Loading</div>
+  <div *ngIf="productListByCatgory">
+    <div class="row g-2" *ngFor="let category of productListByCatgory.categories">
+      <div class="col-lg-3 col-md-3 col-xs-6 " *ngFor="let product of category.productList">
+        <div class="card bg-purpule-100">
+          <img [src]="(imagePath + product.imageName)" class="card-img-top" alt="..." height="250"/>
+          <div class="card-body">
+            <h5 class="card-title mix-card-titleCustom bg-purpule-800 text-white">{{product.productName}}</h5>
+            <p class="card-text mix-card-textCustom">{{product.productDesc}}</p>
+            <p>Available size: <span class="badge bg-purpule-800 text-light mix-badgeCustom" *ngFor="let size of product.availableSize">{{size}}</span></p>
+            <p class="card-price bg-purpule-800">{{product.price | currency:'INR'}}</p>
           </div>
+        </div>
+      </div>
     </div>
+    <div class="clearfix"></div>
+  </div>
 </div>

@@ -5,16 +5,46 @@
            "categoryName" : "Craft & Gifts",
            "productList" : [
                 {
-                    "productName" : "Woolen Purse",
-                    "imageName" : "",
-                    "price": 300,
-                    "productDesc": "Small woolen purse for regular use"
+                    "productName" : "Sweater pink yellow",
+                    "imageName" : "sweter_yellow_pink.jpeg",
+                    "price": 700,
+                    "productDesc": "pink yellow woolen handmade sweater for girl / wommen",
+                    "availableSize": ["small", "medium", "large"]
                 },
                 {
-                    "productName" : "Woolen Frock",
-                    "imageName" : "",
+                    "productName" : "Green yellow top",
+                    "imageName" : "top_for_girls.jpeg",
+                    "price": 450,
+                    "productDesc": "green and yellow top for girl/ wommen",
+                    "availableSize": ["small", "medium", "large"]
+                },
+                {
+                    "productName" : "Butterfly top green",
+                    "imageName" : "top_green_butterfly.jpeg",
+                    "price": 500,
+                    "productDesc": "green and yellow top for girl/ wommen",
+                    "availableSize": ["small", "medium", "large"]
+                },
+                {
+                    "productName" : "Baby frock with hair band",
+                    "imageName" : "woolen_frock_pink.jpg",
                     "price": 600,
-                    "productDesc": "Small woolen frock for baby girl"
+                    "productDesc": "woolen frock for baby girl with hair band of same color",
+                    "availableSize": ["small", "medium", "large"]
+                },
+                {
+                    "productName" : "woolen frock yellow red",
+                    "imageName" : "woolen_frock_yellow_red.jpeg",
+                    "price": 600,
+                    "productDesc": "woolen frock yellow red for baby girl, available in different color if specify color in order",
+                    "availableSize": ["small", "medium", "large"]
+                },
+                {
+                    "productName" : "Ladies woolen handmade purse",
+                    "imageName" : "woolen_purse.jpeg",
+                    "price": 350,
+                    "productDesc": "Ladies woolen handmade purse, available in different color if specify color in order",
+                    "availableSize": ["regular"]
                 }                
            ]
         },
