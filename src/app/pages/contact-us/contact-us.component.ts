@@ -20,6 +20,7 @@ export class ContactUsComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       message: ['', Validators.required]
     });
+ 
     this.contactData = {
       shopName:'',
       address : '',
@@ -31,7 +32,7 @@ export class ContactUsComponent implements OnInit {
   public ngOnInit(): void {
     this.contactService.getContactData().subscribe(data => {
       this.contactData = data;
-    });
+    });    
   }
 
  public get f(): { [key: string]: AbstractControl } {
